@@ -1,0 +1,17 @@
+version: "3"
+
+service :
+  caddy:
+  image: caddy:latest
+  ports:
+    - "80:80"
+    - "443:443"
+
+  haproxy:
+  image: haproxy:latsest
+  ports:
+    - "80:80"
+    - "443:443"
+
+  v2ray:
+    build: ./v2ray
